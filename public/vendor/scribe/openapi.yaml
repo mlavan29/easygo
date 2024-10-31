@@ -1,0 +1,4151 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://rideinjune.test'
+paths:
+  /api/web_payment:
+    post:
+      summary: ''
+      operationId: postApiWeb_payment
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Server Error'
+                properties:
+                  message:
+                    type: string
+                    example: 'Server Error'
+      tags:
+        - Endpoints
+      security: []
+  /api/payment/success:
+    post:
+      summary: ''
+      operationId: postApiPaymentSuccess
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/payment/verify:
+    post:
+      summary: ''
+      operationId: postApiPaymentVerify
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Server Error'
+                properties:
+                  message:
+                    type: string
+                    example: 'Server Error'
+      tags:
+        - Endpoints
+      security: []
+  /api/payment/cancel:
+    get:
+      summary: ''
+      operationId: getApiPaymentCancel
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "<div style=\"display: none\" id=\"data\">\n\t{\"status_code\":\"0\",\"message\":\"Payment failed\"}\n</div>"
+      tags:
+        - Endpoints
+      security: []
+  /api/cron_request_car:
+    get:
+      summary: 'Cron request to cars for scheduled ride'
+      operationId: cronRequestToCarsForScheduledRide
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Endpoints
+      security: []
+  /api/cron_offline:
+    get:
+      summary: 'Update User Offline status'
+      operationId: updateUserOfflineStatus
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  status_message: 'updated successfully'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  status_message:
+                    type: string
+                    example: 'updated successfully'
+      tags:
+        - Endpoints
+      security: []
+  /api/currency_cron:
+    get:
+      summary: 'Update Currency rate'
+      operationId: updateCurrencyRate
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example:
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: AED
+                    value: 3.672985
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: AFN
+                    value: 70.665277
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ALL
+                    value: 92.120197
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: AMD
+                    value: 387.860145
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ANG
+                    value: 1.801625
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: AOA
+                    value: 872.635
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ARS
+                    value: 924.7203
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: AUD
+                    value: 1.493607
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: AWG
+                    value: 1.8
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: AZN
+                    value: 1.7
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BAM
+                    value: 1.796298
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BBD
+                    value: 2
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BDT
+                    value: 117.460121
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BGN
+                    value: 1.796246
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BHD
+                    value: 0.376936
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BIF
+                    value: 2879.245441
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BMD
+                    value: 1
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BND
+                    value: 1.344698
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BOB
+                    value: 6.907636
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BRL
+                    value: 5.5445
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BSD
+                    value: 1
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BTC
+                    value: 1.5601358E-5
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BTN
+                    value: 83.632269
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BWP
+                    value: 13.536984
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BYN
+                    value: 3.271507
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: BZD
+                    value: 2.01498
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CAD
+                    value: 1.371215
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CDF
+                    value: 2841.054324
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CHF
+                    value: 0.889149
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CLF
+                    value: 0.033834
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CLP
+                    value: 933.59
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CNH
+                    value: 7.281515
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CNY
+                    value: 7.2694
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: COP
+                    value: 4045.582822
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CRC
+                    value: 524.524669
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CUC
+                    value: 1
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CUP
+                    value: 25.75
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CVE
+                    value: 101.228325
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: CZK
+                    value: 23.183
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: DJF
+                    value: 177.985807
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: DKK
+                    value: 6.849199
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: DOP
+                    value: 59.184694
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: DZD
+                    value: 134.601
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: EGP
+                    value: 48.249367
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ERN
+                    value: 15
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ETB
+                    value: 57.305737
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: EUR
+                    value: 0.917988
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: FJD
+                    value: 2.2357
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: FKP
+                    value: 0.773554
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GBP
+                    value: 0.773554
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GEL
+                    value: 2.715
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GGP
+                    value: 0.773554
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GHS
+                    value: 15.424391
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GIP
+                    value: 0.773554
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GMD
+                    value: 67.8
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GNF
+                    value: 8646.302208
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GTQ
+                    value: 7.767302
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: GYD
+                    value: 209.139417
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: HKD
+                    value: 7.809835
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: HNL
+                    value: 24.758564
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: HRK
+                    value: 6.917922
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: HTG
+                    value: 131.953221
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: HUF
+                    value: 358.711589
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: IDR
+                    value: 16196.887781
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ILS
+                    value: 3.655572
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: IMP
+                    value: 0.773554
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: INR
+                    value: 83.664131
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: IQD
+                    value: 1309.522101
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: IRR
+                    value: 42087.5
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ISK
+                    value: 137.24
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: JEP
+                    value: 0.773554
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: JMD
+                    value: 156.218629
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: JOD
+                    value: 0.7086
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: JPY
+                    value: 157.47806818
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KES
+                    value: 131.25
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KGS
+                    value: 84.6427
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KHR
+                    value: 4107.303915
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KMF
+                    value: 450.550173
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KPW
+                    value: 900
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KRW
+                    value: 1387.696325
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KWD
+                    value: 0.305733
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KYD
+                    value: 0.833031
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: KZT
+                    value: 476.269782
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: LAK
+                    value: 22167.778675
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: LBP
+                    value: 89502.541514
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: LKR
+                    value: 303.500682
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: LRD
+                    value: 195.08723
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: LSL
+                    value: 18.335866
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: LYD
+                    value: 4.848156
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MAD
+                    value: 9.850064
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MDL
+                    value: 17.693873
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MGA
+                    value: 4503.094735
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MKD
+                    value: 56.48019
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MMK
+                    value: 3247
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MNT
+                    value: 3450
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MOP
+                    value: 8.040632
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MRU
+                    value: 39.446361
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MUR
+                    value: 46.670003
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MVR
+                    value: 15.405
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MWK
+                    value: 1733.382262
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MXN
+                    value: 17.919867
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MYR
+                    value: 4.6765
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: MZN
+                    value: 63.850001
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: NAD
+                    value: 18.335866
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: NGN
+                    value: 1629.84
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: NIO
+                    value: 36.792969
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: NOK
+                    value: 10.850415
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: NPR
+                    value: 133.811248
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: NZD
+                    value: 1.659708
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: OMR
+                    value: 0.38497
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: PAB
+                    value: 1
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: PEN
+                    value: 3.743221
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: PGK
+                    value: 3.915338
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: PHP
+                    value: 58.361996
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: PKR
+                    value: 278.005373
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: PLN
+                    value: 3.931995
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: PYG
+                    value: 7558.78298
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: QAR
+                    value: 3.648437
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: RON
+                    value: 4.5637
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: RSD
+                    value: 107.456
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: RUB
+                    value: 87.751598
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: RWF
+                    value: 1309.798123
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SAR
+                    value: 3.750896
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SBD
+                    value: 8.457605
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SCR
+                    value: 13.560505
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SDG
+                    value: 586
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SEK
+                    value: 10.656383
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SGD
+                    value: 1.344478
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SHP
+                    value: 0.773554
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SLL
+                    value: 20969.5
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SOS
+                    value: 571.273455
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SRD
+                    value: 29.565
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SSP
+                    value: 130.26
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: STD
+                    value: 22281.8
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: STN
+                    value: 22.50194
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SVC
+                    value: 8.751378
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SYP
+                    value: 2512.53
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: SZL
+                    value: 18.33954
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: THB
+                    value: 36.26
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: TJS
+                    value: 10.631386
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: TMT
+                    value: 3.51
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: TND
+                    value: 3.099114
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: TOP
+                    value: 2.363136
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: TRY
+                    value: 33.062136
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: TTD
+                    value: 6.789157
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: TWD
+                    value: 32.785499
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: TZS
+                    value: 2685
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: UAH
+                    value: 41.629609
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: UGX
+                    value: 3694.017619
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: UYU
+                    value: 40.304295
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: UZS
+                    value: 12596.309541
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: VES
+                    value: 36.526612
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: VND
+                    value: 25326.076847
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: VUV
+                    value: 118.722
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: WST
+                    value: 2.8
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XAF
+                    value: 602.160747
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XAG
+                    value: 0.03438612
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XAU
+                    value: 0.00041494
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XCD
+                    value: 2.70255
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XDR
+                    value: 0.754045
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XOF
+                    value: 602.160747
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XPD
+                    value: 0.00109886
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XPF
+                    value: 109.545124
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: XPT
+                    value: 0.00104715
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: YER
+                    value: 250.325036
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ZAR
+                    value: 18.329258
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ZMW
+                    value: 25.516282
+                  -
+                    status: true
+                    status_message: 'updated successfully'
+                    target: ZWL
+                    value: 322
+      tags:
+        - Endpoints
+      security: []
+  /api/update_referral_cron:
+    get:
+      summary: 'Update Referral Status'
+      operationId: updateReferralStatus
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  status_message: 'updated successfully'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  status_message:
+                    type: string
+                    example: 'updated successfully'
+      tags:
+        - Endpoints
+      security: []
+  /api/paypal_payout:
+    get:
+      summary: 'Update Paypal Payout Status'
+      operationId: updatePaypalPayoutStatus
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: false
+                  status_message: 'No Pending Payouts found'
+                properties:
+                  status:
+                    type: boolean
+                    example: false
+                  status_message:
+                    type: string
+                    example: 'No Pending Payouts found'
+      tags:
+        - Endpoints
+      security: []
+  /api/check_version:
+    get:
+      summary: ''
+      operationId: getApiCheck_version
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '1'
+                  status_message: Success
+                  force_update: no_update
+                  enable_referral: true
+                  otp_enabled: false
+                  support:
+                    -
+                      id: 1
+                      name: Whatsapp
+                      link: '918607248802'
+                      image: 'http://rideinjune.test/images/support/category-image1684133680.png'
+                properties:
+                  status_code:
+                    type: string
+                    example: '1'
+                  status_message:
+                    type: string
+                    example: Success
+                  force_update:
+                    type: string
+                    example: no_update
+                  enable_referral:
+                    type: boolean
+                    example: true
+                  otp_enabled:
+                    type: boolean
+                    example: false
+                  support:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: Whatsapp
+                        link: '918607248802'
+                        image: 'http://rideinjune.test/images/support/category-image1684133680.png'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: Whatsapp
+                        link:
+                          type: string
+                          example: '918607248802'
+                        image:
+                          type: string
+                          example: 'http://rideinjune.test/images/support/category-image1684133680.png'
+      tags:
+        - Endpoints
+      security: []
+  /api/register:
+    get:
+      summary: 'User Resister'
+      operationId: userResister
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '0'
+                  status_message: 'The Mobile field is required.'
+                properties:
+                  status_code:
+                    type: string
+                    example: '0'
+                  status_message:
+                    type: string
+                    example: 'The Mobile field is required.'
+      tags:
+        - Endpoints
+      security: []
+  /api/socialsignup:
+    get:
+      summary: 'User Socail media Resister & Login'
+      operationId: userSocailMediaResisterLogin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '2'
+                  status_message: 'New User'
+                properties:
+                  status_code:
+                    type: string
+                    example: '2'
+                  status_message:
+                    type: string
+                    example: 'New User'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                auth_type:
+                  type: string
+                  description: ''
+                  example: apple
+                  enum:
+                    - facebook
+                    - google
+                    - apple
+                auth_id:
+                  type: string
+                  description: ''
+                  example: quaerat
+              required:
+                - auth_type
+                - auth_id
+      security: []
+  /api/apple_callback:
+    get:
+      summary: 'User Socail media Resister & Login'
+      operationId: userSocailMediaResisterLogin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '0'
+                  status_message: invalid_request
+                properties:
+                  status_code:
+                    type: string
+                    example: '0'
+                  status_message:
+                    type: string
+                    example: invalid_request
+      tags:
+        - Endpoints
+      security: []
+  /api/login:
+    get:
+      summary: 'User Login'
+      operationId: userLogin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '0'
+                  status_message: 'The mobile number format is invalid.'
+                properties:
+                  status_code:
+                    type: string
+                    example: '0'
+                  status_message:
+                    type: string
+                    example: 'The mobile number format is invalid.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mobile_number:
+                  type: string
+                  description: 'Must match the regex /^[0-9]+$/. Must be at least 6 characters.'
+                  example: lvuoajopzfhhhuzozqvbmfeeaiutekbseqinsfjxrmdfkrmzhduwqtnezvmthggxomtcgrvkvdpovpdyylac
+                user_type:
+                  type: string
+                  description: ''
+                  example: driver
+                  enum:
+                    - Rider
+                    - Driver
+                    - rider
+                    - driver
+                password:
+                  type: string
+                  description: ''
+                  example: eaque
+                country_code:
+                  type: string
+                  description: ''
+                  example: doloremque
+                device_type:
+                  type: string
+                  description: ''
+                  example: sed
+                device_id:
+                  type: string
+                  description: ''
+                  example: nisi
+              required:
+                - mobile_number
+                - user_type
+                - password
+                - country_code
+                - device_type
+                - device_id
+      security: []
+  /api/delete-user:
+    post:
+      summary: ''
+      operationId: postApiDeleteUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/otp_verification:
+    get:
+      summary: ''
+      operationId: getApiOtp_verification
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '1'
+                  message: success
+                  status_message: success
+                properties:
+                  status_code:
+                    type: string
+                    example: '1'
+                  message:
+                    type: string
+                    example: success
+                  status_message:
+                    type: string
+                    example: success
+      tags:
+        - Endpoints
+      security: []
+  /api/numbervalidation:
+    get:
+      summary: 'Mobile number verification'
+      operationId: mobileNumberVerification
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '0'
+                  status_message: 'The mobile number format is invalid.'
+                properties:
+                  status_code:
+                    type: string
+                    example: '0'
+                  status_message:
+                    type: string
+                    example: 'The mobile number format is invalid.'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mobile_number:
+                  type: string
+                  description: 'Must match the regex /^[0-9]+$/. Must be at least 6 characters.'
+                  example: swdpqskmggarxzsuzpienajtttzopwacctfvorllibuqbrgvsjfhgxqlxmqdbariivwfxqcbapzfwzirotbnmowpp
+                user_type:
+                  type: string
+                  description: ''
+                  example: Rider
+                  enum:
+                    - Rider
+                    - Driver
+                    - rider
+                    - driver
+                country_code:
+                  type: string
+                  description: ''
+                  example: odio
+              required:
+                - mobile_number
+                - user_type
+                - country_code
+      security: []
+  /api/emailvalidation:
+    get:
+      summary: 'User Email Validation'
+      operationId: userEmailValidation
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Server Error'
+                properties:
+                  message:
+                    type: string
+                    example: 'Server Error'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: hilpert.presley@example.org
+              required:
+                - email
+      security: []
+  /api/forgotpassword:
+    get:
+      summary: 'Forgot Password'
+      operationId: forgotPassword
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '0'
+                  status_message: 'Mobile Number'
+                properties:
+                  status_code:
+                    type: string
+                    example: '0'
+                  status_message:
+                    type: string
+                    example: 'Mobile Number'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mobile_number:
+                  type: string
+                  description: 'Must match the regex /^[0-9]+$/. Must be at least 6 characters.'
+                  example: fneamhnxwy
+                user_type:
+                  type: string
+                  description: ''
+                  example: Driver
+                  enum:
+                    - Rider
+                    - Driver
+                    - rider
+                    - driver
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: '#OIkdWl4z'
+                country_code:
+                  type: string
+                  description: ''
+                  example: laborum
+                device_type:
+                  type: string
+                  description: ''
+                  example: iure
+                device_id:
+                  type: string
+                  description: ''
+                  example: debitis
+              required:
+                - mobile_number
+                - user_type
+                - password
+                - country_code
+                - device_type
+                - device_id
+      security: []
+  /api/language_list:
+    get:
+      summary: ''
+      operationId: getApiLanguage_list
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_code: '1'
+                  status_message: Successfully
+                  language_list:
+                    - en
+                    - es
+                    - pt
+                    - fr
+                    - ar
+                    - hi
+                properties:
+                  status_code:
+                    type: string
+                    example: '1'
+                  status_message:
+                    type: string
+                    example: Successfully
+                  language_list:
+                    type: array
+                    example:
+                      - en
+                      - es
+                      - pt
+                      - fr
+                      - ar
+                      - hi
+                    items:
+                      type: string
+      tags:
+        - Endpoints
+      security: []
+  /api/currency_list:
+    get:
+      summary: ''
+      operationId: getApiCurrency_list
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status_message: 'Currency Details Listed Successfully'
+                  status_code: '1'
+                  currency_list:
+                    -
+                      code: '+256'
+                      symbol: SHS
+                    -
+                      code: '259'
+                      symbol: $
+                    -
+                      code: '32'
+                      symbol: SRD
+                    -
+                      code: '334'
+                      symbol: kz
+                    -
+                      code: '929'
+                      symbol: MRU
+                    -
+                      code: ARS
+                      symbol: $
+                    -
+                      code: AUD
+                      symbol: $
+                    -
+                      code: BDT
+                      symbol: ৳
+                    -
+                      code: BRL
+                      symbol: R$
+                    -
+                      code: CAD
+                      symbol: $
+                    -
+                      code: CFA
+                      symbol: XOF
+                    -
+                      code: CHF
+                      symbol: €
+                    -
+                      code: CNY
+                      symbol: ¥
+                    -
+                      code: CZK
+                      symbol: Kč
+                    -
+                      code: DKK
+                      symbol: kr
+                    -
+                      code: DOP
+                      symbol: RD$
+                    -
+                      code: EGY
+                      symbol: EGY
+                    -
+                      code: ETB
+                      symbol: Etb
+                    -
+                      code: EUR
+                      symbol: €
+                    -
+                      code: GBP
+                      symbol: £
+                    -
+                      code: Gh
+                      symbol: GH₵
+                    -
+                      code: HKD
+                      symbol: $
+                    -
+                      code: HUF
+                      symbol: Ft
+                    -
+                      code: IDR
+                      symbol: Rp
+                    -
+                      code: ILS
+                      symbol: ₪
+                    -
+                      code: INR
+                      symbol: ₹
+                    -
+                      code: IQD
+                      symbol: IQD
+                    -
+                      code: JPY
+                      symbol: ¥
+                    -
+                      code: KE
+                      symbol: KE
+                    -
+                      code: Kes
+                      symbol: Ksh
+                    -
+                      code: KRW
+                      symbol: ₩
+                    -
+                      code: KZT
+                      symbol: KZT
+                    -
+                      code: MXN
+                      symbol: $
+                    -
+                      code: NGN
+                      symbol: ₦
+                    -
+                      code: NOK
+                      symbol: kr
+                    -
+                      code: NZD
+                      symbol: $
+                    -
+                      code: PEN
+                      symbol: S/
+                    -
+                      code: PHP
+                      symbol: P
+                    -
+                      code: PKR
+                      symbol: Rs
+                    -
+                      code: PLN
+                      symbol: zł
+                    -
+                      code: rs
+                      symbol: Rd
+                    -
+                      code: RSD
+                      symbol: din
+                    -
+                      code: RUB
+                      symbol: p
+                    -
+                      code: SAR
+                      symbol: SR
+                    -
+                      code: SEK
+                      symbol: kr
+                    -
+                      code: SGD
+                      symbol: $
+                    -
+                      code: SOS
+                      symbol: S
+                    -
+                      code: THB
+                      symbol: ฿
+                    -
+                      code: TRY
+                      symbol: ₺
+                    -
+                      code: TSh
+                      symbol: Tah
+                    -
+                      code: TWD
+                      symbol: $
+                    -
+                      code: USD
+                      symbol: $
+                    -
+                      code: VND
+                      symbol: ₫
+                    -
+                      code: ZAR
+                      symbol: R
+                properties:
+                  status_message:
+                    type: string
+                    example: 'Currency Details Listed Successfully'
+                  status_code:
+                    type: string
+                    example: '1'
+                  currency_list:
+                    type: array
+                    example:
+                      -
+                        code: '+256'
+                        symbol: SHS
+                      -
+                        code: '259'
+                        symbol: $
+                      -
+                        code: '32'
+                        symbol: SRD
+                      -
+                        code: '334'
+                        symbol: kz
+                      -
+                        code: '929'
+                        symbol: MRU
+                      -
+                        code: ARS
+                        symbol: $
+                      -
+                        code: AUD
+                        symbol: $
+                      -
+                        code: BDT
+                        symbol: ৳
+                      -
+                        code: BRL
+                        symbol: R$
+                      -
+                        code: CAD
+                        symbol: $
+                      -
+                        code: CFA
+                        symbol: XOF
+                      -
+                        code: CHF
+                        symbol: €
+                      -
+                        code: CNY
+                        symbol: ¥
+                      -
+                        code: CZK
+                        symbol: Kč
+                      -
+                        code: DKK
+                        symbol: kr
+                      -
+                        code: DOP
+                        symbol: RD$
+                      -
+                        code: EGY
+                        symbol: EGY
+                      -
+                        code: ETB
+                        symbol: Etb
+                      -
+                        code: EUR
+                        symbol: €
+                      -
+                        code: GBP
+                        symbol: £
+                      -
+                        code: Gh
+                        symbol: GH₵
+                      -
+                        code: HKD
+                        symbol: $
+                      -
+                        code: HUF
+                        symbol: Ft
+                      -
+                        code: IDR
+                        symbol: Rp
+                      -
+                        code: ILS
+                        symbol: ₪
+                      -
+                        code: INR
+                        symbol: ₹
+                      -
+                        code: IQD
+                        symbol: IQD
+                      -
+                        code: JPY
+                        symbol: ¥
+                      -
+                        code: KE
+                        symbol: KE
+                      -
+                        code: Kes
+                        symbol: Ksh
+                      -
+                        code: KRW
+                        symbol: ₩
+                      -
+                        code: KZT
+                        symbol: KZT
+                      -
+                        code: MXN
+                        symbol: $
+                      -
+                        code: NGN
+                        symbol: ₦
+                      -
+                        code: NOK
+                        symbol: kr
+                      -
+                        code: NZD
+                        symbol: $
+                      -
+                        code: PEN
+                        symbol: S/
+                      -
+                        code: PHP
+                        symbol: P
+                      -
+                        code: PKR
+                        symbol: Rs
+                      -
+                        code: PLN
+                        symbol: zł
+                      -
+                        code: rs
+                        symbol: Rd
+                      -
+                        code: RSD
+                        symbol: din
+                      -
+                        code: RUB
+                        symbol: p
+                      -
+                        code: SAR
+                        symbol: SR
+                      -
+                        code: SEK
+                        symbol: kr
+                      -
+                        code: SGD
+                        symbol: $
+                      -
+                        code: SOS
+                        symbol: S
+                      -
+                        code: THB
+                        symbol: ฿
+                      -
+                        code: TRY
+                        symbol: ₺
+                      -
+                        code: TSh
+                        symbol: Tah
+                      -
+                        code: TWD
+                        symbol: $
+                      -
+                        code: USD
+                        symbol: $
+                      -
+                        code: VND
+                        symbol: ₫
+                      -
+                        code: ZAR
+                        symbol: R
+                    items:
+                      type: object
+                      properties:
+                        code:
+                          type: string
+                          example: '+256'
+                        symbol:
+                          type: string
+                          example: SHS
+      tags:
+        - Endpoints
+      security: []
+  /api/common_data:
+    get:
+      summary: 'Get Common Data'
+      operationId: getCommonData
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/get_payment_list:
+    post:
+      summary: 'Get Payment List'
+      operationId: getPaymentList
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/logout:
+    get:
+      summary: ''
+      operationId: getApiLogout
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/language:
+    get:
+      summary: ''
+      operationId: getApiLanguage
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/update_device:
+    get:
+      summary: 'Updat Device ID and Device Type'
+      operationId: updatDeviceIDAndDeviceType
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: Rider
+                  enum:
+                    - Rider
+                    - Driver
+                    - rider
+                    - driver
+                device_type:
+                  type: string
+                  description: ''
+                  example: et
+                device_id:
+                  type: string
+                  description: ''
+                  example: voluptas
+              required:
+                - user_type
+                - device_type
+                - device_id
+      security: []
+  /api/updatelocation:
+    get:
+      summary: 'Update Location of Driver & calculate the trip distance while trip'
+      operationId: updateLocationOfDriverCalculateTheTripDistanceWhileTrip
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                latitude:
+                  type: string
+                  description: ''
+                  example: est
+                longitude:
+                  type: string
+                  description: ''
+                  example: deleniti
+                user_type:
+                  type: string
+                  description: ''
+                  example: Driver
+                  enum:
+                    - Driver
+                    - driver
+                status:
+                  type: string
+                  description: ''
+                  example: Online
+                  enum:
+                    - Online
+                    - Offline
+                    - online
+                    - offline
+                    - Trip
+                    - trip
+              required:
+                - latitude
+                - longitude
+                - user_type
+                - status
+      security: []
+  /api/check_status:
+    get:
+      summary: 'Check the Document status from driver side'
+      operationId: checkTheDocumentStatusFromDriverSide
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: Driver
+                  enum:
+                    - Driver
+                    - driver
+                    - Rider
+                    - rider
+              required:
+                - user_type
+      security: []
+  /api/update_document:
+    post:
+      summary: ''
+      operationId: postApiUpdate_document
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: ''
+                  example: Vehicle
+                  enum:
+                    - Driver
+                    - Vehicle
+                document_id:
+                  type: string
+                  description: ''
+                  example: sapiente
+              required:
+                - type
+                - document_id
+      security: []
+  /api/country_list:
+    get:
+      summary: 'Display Country List'
+      operationId: displayCountryList
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/toll_reasons:
+    get:
+      summary: ''
+      operationId: getApiToll_reasons
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/cancel_reasons:
+    get:
+      summary: ''
+      operationId: getApiCancel_reasons
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/get_referral_details:
+    get:
+      summary: 'To Get the referral Users Details'
+      operationId: toGetTheReferralUsersDetails
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/get_trip_details:
+    get:
+      summary: 'Get Trip details Of Given trip id. If trip id not passed then returns incomplete trip details'
+      operationId: getTripDetailsOfGivenTripIdIfTripIdNotPassedThenReturnsIncompleteTripDetails
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trip_id:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
+  /api/send_message:
+    get:
+      summary: 'Send Message to the User'
+      operationId: sendMessageToTheUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                receiver_id:
+                  type: string
+                  description: ''
+                  example: nobis
+                message:
+                  type: string
+                  description: ''
+                  example: eius
+              required:
+                - receiver_id
+                - message
+      security: []
+  /api/get_nearest_vehicles:
+    get:
+      summary: 'Get Nearest Vehicles'
+      operationId: getNearestVehicles
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                latitude:
+                  type: string
+                  description: ''
+                  example: sit
+                longitude:
+                  type: string
+                  description: ''
+                  example: nisi
+              required:
+                - latitude
+                - longitude
+      security: []
+  /api/search_cars:
+    get:
+      summary: 'Rider Request to Search Cars'
+      operationId: riderRequestToSearchCars
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pickup_latitude:
+                  type: string
+                  description: ''
+                  example: in
+                pickup_longitude:
+                  type: string
+                  description: ''
+                  example: exercitationem
+                drop_latitude:
+                  type: string
+                  description: ''
+                  example: ea
+                drop_longitude:
+                  type: string
+                  description: ''
+                  example: autem
+                user_type:
+                  type: string
+                  description: ''
+                  example: rider
+                  enum:
+                    - Rider
+                    - rider
+              required:
+                - pickup_latitude
+                - pickup_longitude
+                - drop_latitude
+                - drop_longitude
+                - user_type
+      security: []
+  /api/request_cars:
+    post:
+      summary: 'Ride Request from Rider'
+      operationId: rideRequestFromRider
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/track_driver:
+    get:
+      summary: 'Track the Driver Location'
+      operationId: trackTheDriverLocation
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: nulla
+                trip_id:
+                  type: string
+                  description: ''
+                  example: perspiciatis
+              required:
+                - user_type
+                - trip_id
+      security: []
+  /api/updateriderlocation:
+    get:
+      summary: 'Update Location of Rider'
+      operationId: updateLocationOfRider
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                latitude:
+                  type: string
+                  description: ''
+                  example: et
+                longitude:
+                  type: string
+                  description: ''
+                  example: ab
+              required:
+                - latitude
+                - longitude
+      security: []
+  /api/promo_details:
+    get:
+      summary: 'Display the promo details'
+      operationId: displayThePromoDetails
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/sos:
+    get:
+      summary: 'Display the SOS details'
+      operationId: displayTheSOSDetails
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/sosalert:
+    get:
+      summary: 'SOS alert Message to Admin and Rider Added Mobile numbers'
+      operationId: sOSAlertMessageToAdminAndRiderAddedMobileNumbers
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/save_schedule_ride:
+    post:
+      summary: 'Save Schedule Ride'
+      operationId: saveScheduleRide
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/schedule_ride_cancel:
+    get:
+      summary: 'Cancel Saved Schedule Ride'
+      operationId: cancelSavedScheduleRide
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trip_id:
+                  type: string
+                  description: ''
+                  example: aut
+                cancel_reason_id:
+                  type: string
+                  description: ''
+                  example: commodi
+              required:
+                - trip_id
+                - cancel_reason_id
+      security: []
+  /api/add_wallet:
+    post:
+      summary: ''
+      operationId: postApiAdd_wallet
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/after_payment:
+    post:
+      summary: ''
+      operationId: postApiAfter_payment
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/get_past_trips:
+    get:
+      summary: 'Display the Past Trips of Rider'
+      operationId: displayThePastTripsOfRider
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: string
+                  description: 'Must be at least 1 character.'
+                  example: yvbpybawqdwjuvpxuahrixwfrotfhurypwfa
+              required:
+                - page
+      security: []
+  /api/get_upcoming_trips:
+    get:
+      summary: 'Display the Upcoming Trips of Rider'
+      operationId: displayTheUpcomingTripsOfRider
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: string
+                  description: 'Must be at least 1 character.'
+                  example: ndikqailhjntvpsqqgccentqtknoyyvniulpwxzqipcqpkusckssrvawnvmbivcsjumhhqumeim
+              required:
+                - page
+      security: []
+  /api/currency_conversion:
+    get:
+      summary: ''
+      operationId: getApiCurrency_conversion
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: number
+                  description: 'Must be at least 0.'
+                  example: 16
+                payment_type:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - amount
+      security: []
+  /api/start_schedule_trip:
+    post:
+      summary: ''
+      operationId: postApiStart_schedule_trip
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trip_id:
+                  type: string
+                  description: ''
+                  example: culpa
+              required:
+                - trip_id
+      security: []
+  /api/get_pending_trips:
+    get:
+      summary: 'Display the Pending Trips For the Driver'
+      operationId: displayThePendingTripsForTheDriver
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: string
+                  description: 'Must be at least 1 character.'
+                  example: hukeuntiyqqpyppbpotddnfsppmnbzgxmvrkarbdiqtulltiyogwhjaxpsxcageyvjoxsfcpzrgmsrn
+              required:
+                - page
+      security: []
+  /api/get_completed_trips:
+    get:
+      summary: 'Display the Completed Trips'
+      operationId: displayTheCompletedTrips
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: string
+                  description: 'Must be at least 1 character.'
+                  example: beoomcgbezgahmjjzkjy
+              required:
+                - page
+      security: []
+  /api/arive_now:
+    get:
+      summary: 'Display the Arrive Now Status'
+      operationId: displayTheArriveNowStatus
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trip_id:
+                  type: string
+                  description: ''
+                  example: labore
+              required:
+                - trip_id
+      security: []
+  /api/begin_trip:
+    get:
+      summary: 'Begin Trip From Driver'
+      operationId: beginTripFromDriver
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trip_id:
+                  type: string
+                  description: ''
+                  example: repellat
+                begin_latitude:
+                  type: string
+                  description: ''
+                  example: esse
+                begin_longitude:
+                  type: string
+                  description: ''
+                  example: at
+              required:
+                - trip_id
+                - begin_latitude
+                - begin_longitude
+      security: []
+  /api/accept_request:
+    get:
+      summary: 'Accept the Trip Request'
+      operationId: acceptTheTripRequest
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: driver
+                  enum:
+                    - Driver
+                    - driver
+                status:
+                  type: string
+                  description: ''
+                  example: Online
+                  enum:
+                    - Online
+                    - online
+                    - Trip
+                    - trip
+                request_id:
+                  type: string
+                  description: ''
+                  example: harum
+              required:
+                - user_type
+                - status
+                - request_id
+      security: []
+  /api/cash_collected:
+    get:
+      summary: ''
+      operationId: getApiCash_collected
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trip_id:
+                  type: string
+                  description: ''
+                  example: hic
+              required:
+                - trip_id
+      security: []
+  /api/map_upload:
+    get:
+      summary: 'Map Image upload'
+      operationId: mapImageUpload
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Token is Invalid'
+                properties:
+                  status:
+                    type: string
+                    example: 'Token is Invalid'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trip_id:
+                  type: string
+                  description: ''
+                  example: sit
+                image:
+                  type: string
+                  description: ''
+                  example: et
+                token:
+                  type: string
+                  description: ''
+                  example: et
+              required:
+                - trip_id
+                - image
+                - token
+      security: []
+  /api/end_trip:
+    get:
+      summary: 'End Trip From Driver'
+      operationId: endTripFromDriver
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                trip_id:
+                  type: string
+                  description: ''
+                  example: cumque
+                end_latitude:
+                  type: string
+                  description: ''
+                  example: assumenda
+                end_longitude:
+                  type: string
+                  description: ''
+                  example: earum
+              required:
+                - trip_id
+                - end_latitude
+                - end_longitude
+      security: []
+  /api/upload_profile_image:
+    get:
+      summary: 'User Profile photo upload'
+      operationId: userProfilePhotoUpload
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  description: ''
+                  example: sit
+              required:
+                - image
+      security: []
+  /api/heat_map:
+    get:
+      summary: 'Send data for heat map'
+      operationId: sendDataForHeatMap
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/pay_to_admin:
+    post:
+      summary: ''
+      operationId: postApiPay_to_admin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/cancel_trip:
+    get:
+      summary: 'Trip Cancel by Driver or Rider'
+      operationId: tripCancelByDriverOrRider
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: driver
+                  enum:
+                    - Rider
+                    - rider
+                    - Driver
+                    - driver
+                trip_id:
+                  type: string
+                  description: ''
+                  example: aperiam
+                cancel_reason_id:
+                  type: string
+                  description: ''
+                  example: delectus
+              required:
+                - user_type
+                - trip_id
+                - cancel_reason_id
+      security: []
+  /api/earning_chart:
+    get:
+      summary: 'Display the Earning chart details in Driver'
+      operationId: displayTheEarningChartDetailsInDriver
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: driver
+                  enum:
+                    - Driver
+                    - driver
+                start_date:
+                  type: string
+                  description: ''
+                  example: in
+                end_date:
+                  type: string
+                  description: ''
+                  example: fugiat
+              required:
+                - user_type
+                - start_date
+                - end_date
+      security: []
+  /api/add_promo_code:
+    get:
+      summary: ''
+      operationId: getApiAdd_promo_code
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+                  description: ''
+                  example: voluptatem
+              required:
+                - code
+      security: []
+  /api/driver_rating:
+    get:
+      summary: 'Display the Diver rating'
+      operationId: displayTheDiverRating
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: driver
+                  enum:
+                    - Driver
+                    - driver
+              required:
+                - user_type
+      security: []
+  /api/rider_feedback:
+    get:
+      summary: 'Display the Rider Feedback'
+      operationId: displayTheRiderFeedback
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: Driver
+                  enum:
+                    - Driver
+                    - driver
+              required:
+                - user_type
+      security: []
+  /api/trip_rating:
+    get:
+      summary: 'Update the trip Rating given by Driver or Rider'
+      operationId: updateTheTripRatingGivenByDriverOrRider
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: Driver
+                  enum:
+                    - Rider
+                    - rider
+                    - Driver
+                    - driver
+                rating:
+                  type: string
+                  description: ''
+                  example: architecto
+                trip_id:
+                  type: string
+                  description: ''
+                  example: quo
+              required:
+                - user_type
+                - rating
+                - trip_id
+      security: []
+  /api/get_invoice:
+    get:
+      summary: 'Get The Invoice of the given Trip id'
+      operationId: getTheInvoiceOfTheGivenTripId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_type:
+                  type: string
+                  description: ''
+                  example: driver
+                  enum:
+                    - Rider
+                    - rider
+                    - Driver
+                    - driver
+                trip_id:
+                  type: string
+                  description: ''
+                  example: quae
+                payment_mode:
+                  type: string
+                  description: ''
+                  example: braintree
+                  enum:
+                    - paypal
+                    - stripe
+                    - cash
+                    - braintree
+                    - onlinepayment
+                is_wallet:
+                  type: string
+                  description: ''
+                  example: 'Yes'
+                  enum:
+                    - 'Yes'
+                    - 'No'
+              required:
+                - user_type
+                - trip_id
+      security: []
+  /api/get_rider_profile:
+    get:
+      summary: 'Display the Rider profile details & get the trip information while app closed'
+      operationId: displayTheRiderProfileDetailsGetTheTripInformationWhileAppClosed
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/update_rider_profile:
+    get:
+      summary: 'Update Rider Profile'
+      operationId: updateRiderProfile
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                profile_image:
+                  type: string
+                  description: ''
+                  example: quia
+                first_name:
+                  type: string
+                  description: ''
+                  example: ad
+                last_name:
+                  type: string
+                  description: ''
+                  example: velit
+                country_code:
+                  type: string
+                  description: ''
+                  example: earum
+                mobile_number:
+                  type: string
+                  description: ''
+                  example: fugit
+                email_id:
+                  type: string
+                  description: ''
+                  example: explicabo
+              required:
+                - profile_image
+                - first_name
+                - last_name
+                - country_code
+                - mobile_number
+                - email_id
+      security: []
+  /api/get_driver_profile:
+    get:
+      summary: 'Display Driver  Profile'
+      operationId: displayDriverProfile
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/update_driver_profile:
+    get:
+      summary: 'Update Driver  Profile'
+      operationId: updateDriverProfile
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: ''
+                  example: provident
+                last_name:
+                  type: string
+                  description: ''
+                  example: est
+                mobile_number:
+                  type: string
+                  description: ''
+                  example: et
+                country_code:
+                  type: string
+                  description: ''
+                  example: et
+                email_id:
+                  type: string
+                  description: ''
+                  example: ratione
+                profile_image:
+                  type: string
+                  description: ''
+                  example: natus
+                address_line1:
+                  type: string
+                  description: ''
+                  example: ut
+                address_line2:
+                  type: string
+                  description: ''
+                  example: asperiores
+                city:
+                  type: string
+                  description: ''
+                  example: qui
+                state:
+                  type: string
+                  description: ''
+                  example: omnis
+                postal_code:
+                  type: string
+                  description: ''
+                  example: reiciendis
+              required:
+                - first_name
+                - last_name
+                - mobile_number
+                - country_code
+                - email_id
+                - profile_image
+                - address_line1
+                - address_line2
+                - city
+                - state
+                - postal_code
+      security: []
+  /api/update_vehicle_details:
+    get:
+      summary: 'Display the vehicle details'
+      operationId: displayTheVehicleDetails
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/vehicle_details:
+    get:
+      summary: 'Display the vehicle details'
+      operationId: displayTheVehicleDetails
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                vehicle_id:
+                  type: string
+                  description: ''
+                  example: corporis
+                vehicle_name:
+                  type: string
+                  description: ''
+                  example: tempore
+                vehicle_type:
+                  type: string
+                  description: ''
+                  example: iusto
+                vehicle_number:
+                  type: string
+                  description: ''
+                  example: rerum
+              required:
+                - vehicle_id
+                - vehicle_name
+                - vehicle_type
+                - vehicle_number
+      security: []
+  /api/update_rider_location:
+    get:
+      summary: 'Update the location of Rider'
+      operationId: updateTheLocationOfRider
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/update_user_currency:
+    get:
+      summary: 'To update the currency code for the user'
+      operationId: toUpdateTheCurrencyCodeForTheUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                currency_code:
+                  type: string
+                  description: ''
+                  example: pariatur
+              required:
+                - currency_code
+      security: []
+  /api/get_caller_detail:
+    get:
+      summary: ''
+      operationId: getApiGet_caller_detail
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                  description: ''
+                  example: tenetur
+              required:
+                - user_id
+      security: []
+  /api/vehicle_descriptions:
+    get:
+      summary: ''
+      operationId: getApiVehicle_descriptions
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/add_card_details:
+    get:
+      summary: 'API for create a customer id  based on card details using stripe payment gateway'
+      operationId: aPIForCreateACustomerIdBasedOnCardDetailsUsingStripePaymentGateway
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                intent_id:
+                  type: string
+                  description: ''
+                  example: voluptatibus
+              required:
+                - intent_id
+      security: []
+  /api/get_card_details:
+    get:
+      summary: 'API for payment card details'
+      operationId: aPIForPaymentCardDetails
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/stripe_supported_country_list:
+    get:
+      summary: 'Display Country List'
+      operationId: displayCountryList
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/update_payout_preference:
+    post:
+      summary: 'Add payout Preferences'
+      operationId: addPayoutPreferences
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payout_method:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
+  /api/get_payout_list:
+    get:
+      summary: 'Get payout Preferences'
+      operationId: getPayoutPreferences
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/earning_list:
+    get:
+      summary: 'View Over All Payout Details of driver'
+      operationId: viewOverAllPayoutDetailsOfDriver
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: ''
+                  example: date
+                  enum:
+                    - week
+                    - weekly
+                    - date
+                start_date:
+                  type: string
+                  description: 'Must be a valid date. Must be a valid date in the format <code>Y-m-d</code>.'
+                  example: '2024-07-19'
+              required:
+                - type
+                - start_date
+      security: []
+  /api/weekly_trip:
+    get:
+      summary: 'View Weekly Payout Details of Driver'
+      operationId: viewWeeklyPayoutDetailsOfDriver
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/weekly_statement:
+    get:
+      summary: 'View Week Day Payout Details of Driver'
+      operationId: viewWeekDayPayoutDetailsOfDriver
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/daily_statement:
+    get:
+      summary: 'View Daily Payout Details of Driver'
+      operationId: viewDailyPayoutDetailsOfDriver
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+  /api/update_vehicle:
+    post:
+      summary: ''
+      operationId: postApiUpdate_vehicle
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                vehicle_type:
+                  type: string
+                  description: ''
+                  example: dolorem
+                make_id:
+                  type: string
+                  description: ''
+                  example: suscipit
+                model_id:
+                  type: string
+                  description: ''
+                  example: quo
+                year:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                color:
+                  type: string
+                  description: ''
+                  example: repellendus
+              required:
+                - vehicle_type
+                - make_id
+                - model_id
+                - year
+                - color
+      security: []
+  /api/delete_vehicle:
+    post:
+      summary: ''
+      operationId: postApiDelete_vehicle
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/update_default_vehicle:
+    get:
+      summary: ''
+      operationId: getApiUpdate_default_vehicle
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: 'Authorization Token not found'
+                properties:
+                  status:
+                    type: string
+                    example: 'Authorization Token not found'
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
