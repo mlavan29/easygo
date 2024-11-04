@@ -156,19 +156,58 @@ app.controller('manual_booking', ['$scope', '$http', '$compile', '$filter','$q',
 	initMap();
 
 	var autoCompleteOptions = {
-		fields: ['place_id', 'name', 'types','formatted_address','address_components','geometry','utc_offset']
+		fields: ['place_id', 'name', 'types','formatted_address','address_components','geometry','utc_offset'],
+		componentRestrictions: {
+	 		country: ['GB'],
+		},
+		strictBounds: true 
 	};
 
-	//Auto complete to pickup & drop location
-	function initAutocomplete()
-	{
-  		pickup_location_autocomplete = new google.maps.places.Autocomplete(document.getElementById('input_pickup_location'),autoCompleteOptions);
-  	  	pickup_location_autocomplete.addListener('place_changed', pickup_location_address);
+	
+	function initAutocomplete() {
+	var autoCompleteOptions = {
+		fields: ['place_id', 'name', 'types', 'formatted_address', 'address_components', 'geometry', 'utc_offset'],
+		componentRestrictions: {
+			country: 'GB'
+		},
+		strictBounds: true
+	};
 
-  	  	drop_location_autocomplete = new google.maps.places.Autocomplete(document.getElementById('input_drop_location'),autoCompleteOptions);
-  	  	drop_location_autocomplete.addListener('place_changed', drop_location_Address);
-   
+	
+	pickup_location_autocomplete = new google.maps.places.Autocomplete(
+		document.getElementById('input_pickup_location'), 
+		autoCompleteOptions
+	);
+	pickup_location_autocomplete.addListener('place_changed', function() {
+		verifyUKLocation(pickup_location_autocomplete, 'input_pickup_location');
+	});
+
+	
+	drop_location_autocomplete = new google.maps.places.Autocomplete(
+		document.getElementById('input_drop_location'), 
+		autoCompleteOptions
+	);
+	drop_location_autocomplete.addListener('place_changed', function() {
+		verifyUKLocation(drop_location_autocomplete, 'input_drop_location');
+	});
+}
+
+
+function verifyUKLocation(autocomplete, inputId) {
+	var place = autocomplete.getPlace();
+
+	
+	if (place.address_components) {
+		var isInUK = place.address_components.some(component => 
+			component.long_name === "United Kingdom" || component.short_name === "GB"
+		);
+
+		if (!isInUK) {
+			document.getElementById(inputId).value = '';
+			alert("Please select a location within the United Kingdom.");
+		}
 	}
+}
 
 	function pickup_location_address() 
 	{

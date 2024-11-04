@@ -29,6 +29,59 @@
 
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ $map_key }}&libraries=places"></script>
   
+<script>
+
+  $(document).ready(function() {
+    
+            
+
+            const debounceDelay = 300; // Debounce delay for input events
+            let activeAjaxRequest = null; // Track the active AJAX request
+            const $loadingSpinner = $('#loading-spinner');
+
+            // Reusable function to handle place suggestions
+            function handlePlaceSuggestions(inputSelector, suggestionsSelector, latitudeInputSelector,
+                longitudeInputSelector, placeIdSelector, suggestionClass) {
+                const $input = $(inputSelector);
+                const $suggestions = $(suggestionsSelector);
+                let debounceTimeout = null;
+
+                var options = {
+                    types: ['geocode'],
+                    componentRestrictions: {
+                        country: 'uk'
+                    } //Turkey only
+                };
+
+                // Hide suggestions initially
+                $suggestions.hide();
+
+                // Setup the Google Places Autocomplete
+                const googleAutocomplete = new google.maps.places.Autocomplete($input[0],options);
+                googleAutocomplete.setFields(['place_id', 'geometry', 'name']);
+
+                // Handle Google Place selection
+                googleAutocomplete.addListener('place_changed', function() {
+                    const place = googleAutocomplete.getPlace();
+                    if (place.geometry) {
+                        $loadingSpinner.show();
+                        $(latitudeInputSelector).val(place.geometry.location.lat());
+                        $(longitudeInputSelector).val(place.geometry.location.lng());
+                        $(placeIdSelector).val(place.place_id);
+                        $suggestions.hide();
+                        $loadingSpinner.hide();
+                    }
+                });
+
+
+            }
+
+            // Initialize for pickup location input
+            handlePlaceSuggestions('#pick_up', '#pickup-place-suggestions', '#pickup_ltt', '#pickup_lgt',
+                '#pickup_place_id', 'place-suggestion-pickup');
+        });
+</script>
+
   <script type="text/javascript">
     if(document.getElementById("map_canvas")){
       google.maps.event.addDomListener(window, 'load', initialize);

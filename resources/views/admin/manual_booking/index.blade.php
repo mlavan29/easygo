@@ -101,7 +101,8 @@
 				<select name="filter[]" multiple="multiple" class="form-control" id="input_filter" style="display: none;">
 					<option value="2">Prefer Handicap Accessibility</option>
 					<option value="3">Prefer Child Seat Accessibility</option>
-					<option value="4">Prefer Female Drivers only</option>
+					<option value="5">Meet and Greet</option>
+					{{-- <option value="4">Prefer Female Drivers only</option> --}}
 				</select>
 			</div>
 			{!! Form::hidden('user_id','',['id'=>'user_id']) !!}
@@ -128,6 +129,18 @@
 				<div class="row clearfix">
 					<div class="col-md-12" ng-init='date_time = "{{@$schedule_ride->schedule_date}} {{@$schedule_ride->schedule_time}}"'>
 						{!! Form::text('date_time',(@$schedule_ride->schedule_date==null)?'':@$schedule_ride->schedule_date.' '.@$schedule_ride->schedule_time, ['class' => 'form-control change_field', 'id' => 'input_date_time', 'placeholder' => 'Select Date/Time Location','ng-cloak','disabled'=>isset($schedule_ride->id)?false:true]) !!}
+						<span class="text-danger error_msg"></span>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						{!! Form::number('no_of_passengers', '', ['class' => 'form-control', 'id' => 'no_of_passengers', 'placeholder' => 'No of passengers','ng-model'=>'no_of_passengers']) !!}
+						<span class="text-danger error_msg"></span>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						{!! Form::number('no_of_suitcases', '', ['class' => 'form-control', 'id' => 'no_of_suitcases', 'placeholder' => 'No of suitcases','ng-model'=>'no_of_suitcases']) !!}
 						<span class="text-danger error_msg"></span>
 					</div>
 				</div>
@@ -158,6 +171,13 @@
 						<span class="text-danger error_msg"></span>
 					</div>
 				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						{!! Form::textarea('input_notes', '', ['class' => 'form-control', 'id' => 'input_notes', 'placeholder' => 'Special Instructions','ng-model'=>'input_notes']) !!}
+						<span class="text-danger error_msg"></span>
+					</div>
+				</div>
+				<hr>
 				<div class="driver_list_div">
 					<div style="display: none;" class="loader"></div>
 					<div style="display: none;" class="driver_list">

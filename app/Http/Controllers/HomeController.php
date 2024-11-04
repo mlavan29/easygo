@@ -23,7 +23,8 @@ class HomeController extends Controller
     **/
 	public function index()
     {
-    	return view('home.home');
+        $map_key = 'AIzaSyDnN6Kev9WkJMunZhTPppqZExNSUXrXYRY';
+    	return view('home.home',compact('map_key'));
     }
   
     /**

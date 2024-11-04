@@ -36,8 +36,10 @@
 																	class="ms-1">Pick Up</span>
 															</div>
 															<input class="form-control" type="text"
-																placeholder="Enter a City or Airport"
-																aria-label="Enter a City or Airport">
+																placeholder="Enter pickup location"
+																aria-label="Enter a City or Airport" id="pick_up">
+                                                                <ul id="pickup-place-suggestions" class="place-suggestions list-group mt-2 pickup-location">
+                                                                </ul>
 														</div>
 													</div>
 													<div class="col-12">
